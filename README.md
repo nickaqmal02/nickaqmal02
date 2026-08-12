@@ -59,8 +59,7 @@ Currently focused on building intelligent systems that solve real-world problems
 
 | Certification | Details |
 |---------------|---------|
-| ✅ **MATLAB** | MATLAB Fundamentals & Programming Techniques
-> MACHINE LEARNING : [ View PDF ](./Certificates/MATLAB_MACHINE_LEARNING.pdf)                 |
+| ✅ **MATLAB** | MATLAB Fundamentals & Programming Techniques ([📜View PDF](./Certificates/MATLAB_MACHINE_LEARNING.pdf))                 |
 | ✅ **Django & DRF** | Web Framework & REST APIs |
 | ✅ **Full-Stack** | Tailwind CSS, Vanilla JS, PostgreSQL |
 
