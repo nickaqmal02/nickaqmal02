@@ -166,10 +166,7 @@ Currently focused on building intelligent systems that solve real-world problems
   <a href="https://github.com/nickaqmal02">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://twitter.com/yourusername">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
-  </a>
-</div>
+  </div>
 
 ---
 
@@ -181,7 +178,7 @@ Currently focused on building intelligent systems that solve real-world problems
 ---
 
 ### ⚡ Fun Fact
-I build systems that help people. From autism therapy platforms to store locators — I believe technology should make the world a better place. 🚀
+I build systems that help people. From autism therapy platforms to store locators and I believe technology should make the world a better place. 🚀
 
 ---
 
