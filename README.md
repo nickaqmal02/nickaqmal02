@@ -1,5 +1,9 @@
 # 👋 Hi, I'm Nik Abdul Aqmal Bin Zunaidi
 
+```
+eval $(poetry env activate)
+```
+
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=2E86C1&center=true&vCenter=true&width=435&lines=Computer+Science+Student;Full-Stack+Developer;NLP+%26+AI+Enthusiast;Django+%26+Laravel+Developer" alt="Typing SVG" />
 </div>
