@@ -1,11 +1,12 @@
-"""Generate the light/dark profile cards (neofetch layout + ASCII portrait).
+"""Generate the light/dark profile cards (neofetch layout + Neovim logo art).
 
 Single source of truth: edit CONTENT / ROWS / palette here, run
 `python build_svg.py`, commit both SVGs. Live values are element ids that
 today.py rewrites, so this file is only for design changes.
 
-Layout: block-art portrait left (with a vertical rule separating it from the
-data), dot-leader key/value rows right, dashed section rules, quote footer.
+Left: Neovim logo as block glyphs (brand blue/green kept per cell).
+Right: dot-leader key/value rows, dashed section rules.
+Footer: quote in comment syntax.
 """
 
 from __future__ import annotations
@@ -26,7 +27,8 @@ PALETTES = {
         "accent": "#58a6ff",
         "accent2": "#2ea043",
         "warn": "#d94f4f",
-        "portrait": ("#182533", "#2b4459", "#3f6484", "#5e8cb5", "#8fbde2", "#d3e9fb"),
+        # logo: blue-light, blue-deep, green-light, green-deep
+        "logo": ("#4aa3e0", "#1f6f9c", "#7dc35a", "#3f7a2f"),
     },
     "light": {
         "bg": "#ffffff",
@@ -37,10 +39,11 @@ PALETTES = {
         "accent": "#0969da",
         "accent2": "#16794a",
         "warn": "#c93c37",
-        "portrait": ("#e8eef4", "#c6d4e2", "#9ab0c6", "#6a89a7", "#41608a", "#22395c"),
+        "logo": ("#1f6f9c", "#10394f", "#3f7a2f", "#204d18"),
     },
 }
 FONT = "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace"
+GLYPHS = " ░▒▓█"
 
 HEADER_USER = "nik@sentiri"
 HEADER_TAIL = "final-year · AI engineering"
@@ -68,34 +71,34 @@ STATS = [
 QUOTE = "// measure it, or it didn't happen."
 
 # ── geometry ──────────────────────────────────────────────────────────────
-PORT_X, PORT_TOP = 60, 110
-PORT_SIZE, PORT_LH = 10, 12.5
+PORT_X, PORT_TOP = 60, 108
+PORT_SIZE, PORT_LH = 11, 13.2
 PORT_ADV = PORT_SIZE * 0.6
-RIGHT_X, RIGHT_EDGE = 540, 1140
+DIVIDER_X = 500
+LEFT_CENTER = (PORT_X + DIVIDER_X) / 2
+RIGHT_X, RIGHT_EDGE = 550, 1140
 VALUE_X = RIGHT_EDGE
-DIVIDER_X = 490
 ROW_TOP, ROW_STEP = 120, 24
 DOT_RESERVE = 128
 FOOTER_RULE_Y = H - 88
 FOOTER_TEXT_Y = H - 56
 
 
-def load_portrait() -> dict:
-    p = Path("ascii_portrait.json")
-    return json.loads(p.read_text()) if p.exists() else {"cols": 0, "rows": 0, "shades": []}
+def load_logo() -> dict:
+    p = Path("ascii_logo.json")
+    return json.loads(p.read_text()) if p.exists() else {"cols": 0, "rows": 0, "cells": []}
 
 
 def tw(s: str, size: float = 13) -> float:
-    """Approximate monospace text width."""
     return len(s) * size * 0.6
 
 
 def build(theme: str, values: dict[str, str]) -> str:
     p = PALETTES[theme]
-    port = load_portrait()
-    invert = True                      # both: ink mapping (dark pixels = dense glyphs)
-    ramp = " .:oO@"
-    shades = p["portrait"]
+    logo = load_logo()
+    logo_w = logo["cols"] * PORT_ADV
+    logo_h = logo["rows"] * PORT_LH
+    logo_x = LEFT_CENTER - logo_w / 2
     out: list[str] = []
     add = out.append
 
@@ -111,16 +114,15 @@ def build(theme: str, values: dict[str, str]) -> str:
       .scan {{ animation: scan 8s linear infinite; }}
       @keyframes scan {{
         0%   {{ transform: translateY(0); opacity: 0; }}
-        6%   {{ opacity: .22; }}
-        58%  {{ opacity: .22; }}
-        66%  {{ transform: translateY({port["rows"] * PORT_LH if port["rows"] else 360}px); opacity: 0; }}
-        100% {{ transform: translateY({port["rows"] * PORT_LH if port["rows"] else 360}px); opacity: 0; }}
+        6%   {{ opacity: .18; }}
+        58%  {{ opacity: .18; }}
+        66%  {{ transform: translateY({logo_h:.0f}px); opacity: 0; }}
+        100% {{ transform: translateY({logo_h:.0f}px); opacity: 0; }}
       }}
       @media (prefers-reduced-motion: reduce) {{ .blink, .pulse, .scan {{ animation: none; }} }}
     """)
     add("</style></defs>")
 
-    # card
     add(f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="16" '
         f'fill="{p["bg"]}" stroke="{p["border"]}" stroke-width="1"/>')
 
@@ -133,46 +135,42 @@ def build(theme: str, values: dict[str, str]) -> str:
     add(f'<line x1="{PORT_X}" y1="82" x2="{RIGHT_EDGE}" y2="82" '
         f'stroke="{p["border"]}" stroke-width="1"/>')
 
-    # ── portrait ──────────────────────────────────────────────────────────
-    if port["shades"]:
-        add('<g id="portrait">')
-        add(f'<rect class="scan" x="{PORT_X - 6}" y="{PORT_TOP - 4}" '
-            f'width="{port["cols"] * PORT_ADV + 12:.0f}" height="2" '
-            f'fill="{p["accent"]}" opacity="0"/>')
-        for i, row in enumerate(port["shades"]):
+    # ── logo ──────────────────────────────────────────────────────────────
+    if logo["cells"]:
+        add('<g id="logo">')
+        add(f'<rect class="scan" x="{logo_x - 6:.0f}" y="{PORT_TOP - 6}" '
+            f'width="{logo_w + 12:.0f}" height="2" fill="{p["accent"]}" opacity="0"/>')
+        for i, row in enumerate(logo["cells"]):
             y = PORT_TOP + i * PORT_LH
-            if all(v >= len(ramp) for v in row):
+            if all(cell[0] == 0 for cell in row):
                 continue
-            add(f'<text x="{PORT_X}" y="{y:.1f}" font-size="{PORT_SIZE}" xml:space="preserve">')
-            run_char, run_glyph, run_start = None, None, 0
-            for x_idx, lum in enumerate(row):
-                if lum >= len(ramp):          # paper sentinel -> blank, both themes
-                    glyph, char = 0, " "
+            add(f'<text x="{LEFT_CENTER:.0f}" y="{y:.1f}" font-size="{PORT_SIZE}" '
+                f'text-anchor="middle" xml:space="preserve">')
+            run_colour, buf = None, ""
+            for glyph_idx, colour_idx in row:
+                if run_colour is None:
+                    run_colour, buf = colour_idx, GLYPHS[glyph_idx]
+                elif colour_idx != run_colour:
+                    add(f'<tspan fill="{p["logo"][run_colour]}">{escape(buf)}</tspan>')
+                    run_colour, buf = colour_idx, GLYPHS[glyph_idx]
                 else:
-                    glyph = (len(ramp) - 1) - lum
-                    char = ramp[glyph]
-                if run_char is None:
-                    run_char, run_glyph, run_start = char, glyph, x_idx
-                elif glyph != run_glyph:
-                    add(f'<tspan fill="{shades[run_glyph]}">'
-                        f'{escape(run_char * (x_idx - run_start))}</tspan>')
-                    run_char, run_glyph, run_start = char, glyph, x_idx
-            if run_char is not None:
-                add(f'<tspan fill="{shades[run_glyph]}">'
-                    f'{escape(run_char * (len(row) - run_start))}</tspan>')
+                    buf += GLYPHS[glyph_idx]
+            if buf:
+                add(f'<tspan fill="{p["logo"][run_colour]}">{escape(buf)}</tspan>')
             add("</text>")
         add("</g>")
 
-    # vertical rule between portrait and data
-    add(f'<line x1="{DIVIDER_X}" y1="104" x2="{DIVIDER_X}" y2="{PORT_TOP + (port["rows"] * PORT_LH if port["rows"] else 360) + 6:.0f}" '
+    # vertical rule between logo and data
+    rule_bottom = PORT_TOP + (logo_h if logo["rows"] else 360) + 8
+    add(f'<line x1="{DIVIDER_X}" y1="104" x2="{DIVIDER_X}" y2="{rule_bottom:.0f}" '
         f'stroke="{p["border"]}" stroke-width="1"/>')
 
-    # caption under portrait
-    cap_y = PORT_TOP + (port["rows"] * PORT_LH if port["rows"] else 360) + 26
-    add(f'<text x="{PORT_X}" y="{cap_y:.0f}" font-size="11" fill="{p["muted"]}">'
-        f'nikabdulaqmal@gmail.com</text>')
-    add(f'<text x="{PORT_X}" y="{cap_y + 18:.0f}" font-size="11" fill="{p["muted"]}">'
-        f'github.com/nickaqmal02</text>')
+    # centred caption under the logo
+    cap_y = PORT_TOP + (logo_h if logo["rows"] else 360) + 34
+    add(f'<text x="{LEFT_CENTER:.0f}" y="{cap_y:.0f}" font-size="11" fill="{p["muted"]}" '
+        f'text-anchor="middle">nikabdulaqmal@gmail.com</text>')
+    add(f'<text x="{LEFT_CENTER:.0f}" y="{cap_y + 18:.0f}" font-size="11" fill="{p["muted"]}" '
+        f'text-anchor="middle">github.com/nickaqmal02</text>')
 
     # ── key/value rows ────────────────────────────────────────────────────
     y = ROW_TOP
@@ -227,7 +225,6 @@ def build(theme: str, values: dict[str, str]) -> str:
             f'text-anchor="end">—</text>')
         y += ROW_STEP
 
-    # added / deleted sub-line, right aligned under LINES
     add(f'<text x="{VALUE_X}" y="{y + 2}" font-size="10.5" text-anchor="end">'
         f'<tspan id="loc_add" fill="{p["accent2"]}">—</tspan>'
         f'<tspan fill="{p["muted"]}"> / </tspan>'
