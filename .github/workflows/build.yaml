@@ -51,4 +51,6 @@ jobs:
           git config user.email "bot@users.noreply.github.com"
           git config user.name "profile-bot"
           git commit -m "chore: refresh profile stats $(date -u +'%Y-%m-%d')"
+          # rebase onto any concurrent push so the bot never clobbers a design change
+          git pull --rebase --autostash origin master
           git push
