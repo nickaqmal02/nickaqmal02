@@ -69,22 +69,22 @@
 <text x="734" y="268" font-size="13" fill="#57606a">account age</text>
 <text id="account_age" x="1094" y="268" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">1 yr, 5 mo</text>
 <text x="734" y="302" font-size="13" fill="#57606a">commits</text>
-<text id="commit_data" x="1094" y="302" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">237</text>
+<text id="commit_data" x="1094" y="302" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">202</text>
 <rect x="722" y="316" width="384" height="30" rx="6" fill="#00000006"/>
 <text x="734" y="336" font-size="13" fill="#57606a">repositories</text>
-<text id="repo_data" x="1094" y="336" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">50</text>
+<text id="repo_data" x="1094" y="336" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">41</text>
 <text x="734" y="370" font-size="13" fill="#57606a">stars earned</text>
 <text id="star_data" x="1094" y="370" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">13</text>
 <rect x="722" y="384" width="384" height="30" rx="6" fill="#00000006"/>
 <text x="734" y="404" font-size="13" fill="#57606a">contributed to</text>
-<text id="contrib_data" x="1094" y="404" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">50</text>
+<text id="contrib_data" x="1094" y="404" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">41</text>
 <text x="734" y="438" font-size="13" fill="#57606a">followers</text>
 <text id="follower_data" x="1094" y="438" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">35</text>
 <rect x="722" y="452" width="384" height="30" rx="6" fill="#00000006"/>
 <text x="734" y="472" font-size="13" fill="#57606a">lines written</text>
-<text id="loc_data" x="1094" y="472" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">761,217</text>
+<text id="loc_data" x="1094" y="472" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">518,610</text>
 <text x="734" y="506" font-size="13" fill="#57606a">added / deleted</text>
-<text id="loc_delta" x="1094" y="506" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">+775,528 / −14,311</text>
+<text id="loc_delta" x="1094" y="506" font-size="13" font-weight="600" fill="#1f2328" text-anchor="end">+530,958 / −12,348</text>
 <line x1="64" y1="568" x2="1116" y2="568" stroke="#d0d7de" stroke-width="1"/>
 <text x="64" y="598" font-size="14" fill="#1f2328"><tspan fill="#1a7f37">nik@sentiri</tspan> <tspan fill="#57606a">~ %</tspan> <tspan fill="#57606a">measure it, or it didn't happen</tspan></text>
 <rect class="cursor" x="466" y="586" width="9" height="15" fill="#0969da"/>
