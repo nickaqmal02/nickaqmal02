@@ -489,20 +489,20 @@
 <line x1="632" y1="402" x2="1140" y2="402" stroke="#d8dee6" stroke-width="1"/>
 <text x="540" y="432" font-size="12" letter-spacing="1.2" fill="#7c5cbf">REPOS</text>
 <line x1="588" y1="428" x2="1012" y2="428" stroke="#6b7785" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
-<text id="repo_data" x="1140" y="432" font-size="13" fill="#1b222c" text-anchor="end">50</text>
+<text id="repo_data" x="1140" y="432" font-size="13" fill="#1b222c" text-anchor="end">41</text>
 <text x="540" y="456" font-size="12" letter-spacing="1.2" fill="#7c5cbf">STARS</text>
 <line x1="588" y1="452" x2="1012" y2="452" stroke="#6b7785" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
 <text id="star_data" x="1140" y="456" font-size="13" fill="#1b222c" text-anchor="end">13</text>
 <text x="540" y="480" font-size="12" letter-spacing="1.2" fill="#7c5cbf">COMMITS</text>
 <line x1="602" y1="476" x2="1012" y2="476" stroke="#6b7785" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
-<text id="commit_data" x="1140" y="480" font-size="13" fill="#1b222c" text-anchor="end">238</text>
+<text id="commit_data" x="1140" y="480" font-size="13" fill="#1b222c" text-anchor="end">203</text>
 <text x="540" y="504" font-size="12" letter-spacing="1.2" fill="#7c5cbf">FOLLOWERS</text>
 <line x1="617" y1="500" x2="1012" y2="500" stroke="#6b7785" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
 <text id="follower_data" x="1140" y="504" font-size="13" fill="#1b222c" text-anchor="end">35</text>
 <text x="540" y="528" font-size="12" letter-spacing="1.2" fill="#7c5cbf">LINES</text>
 <line x1="588" y1="524" x2="1012" y2="524" stroke="#6b7785" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
-<text id="loc_data" x="1140" y="528" font-size="13" fill="#1b222c" text-anchor="end">762,103</text>
-<text x="1140" y="554" font-size="10.5" text-anchor="end"><tspan id="loc_add" fill="#16794a">+776,603</tspan><tspan fill="#6b7785"> / </tspan><tspan id="loc_del" fill="#c93c37">−14,500</tspan></text>
+<text id="loc_data" x="1140" y="528" font-size="13" fill="#1b222c" text-anchor="end">519,489</text>
+<text x="1140" y="554" font-size="10.5" text-anchor="end"><tspan id="loc_add" fill="#16794a">+532,260</tspan><tspan fill="#6b7785"> / </tspan><tspan id="loc_del" fill="#c93c37">−12,771</tspan></text>
 <line x1="60" y1="572" x2="1140" y2="572" stroke="#d8dee6" stroke-width="1"/>
 <text x="60" y="604" font-size="13" fill="#6b7785">// measure it, or it didn't happen.</text>
 <rect class="blink" x="340" y="592" width="8" height="14" fill="#0969da"/>
