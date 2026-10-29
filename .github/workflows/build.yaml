@@ -1,0 +1,54 @@
+name: Profile card build
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: "0 18 * * *"   # 02:00 MYT — refresh stats overnight
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: cache/requirements.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r cache/requirements.txt
+
+      # build_svg.py is intentionally NOT run here: it rewrites the cards from
+      # the layout definition and would reset live values to placeholders.
+      # Run it locally when you change the design, then commit the SVGs.
+      - name: Refresh live stats
+        env:
+          # ACCESS_TOKEN: fine-grained PAT with Account -> Followers/Starring read
+          # and Repository -> Contents/Metadata read. Falls back to the workflow
+          # token, which is enough for public-only data.
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
+          USER_NAME: nickaqmal02
+        run: python today.py
+
+      - name: Commit
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.email "bot@users.noreply.github.com"
+          git config user.name "profile-bot"
+          git commit -m "chore: refresh profile stats $(date -u +'%Y-%m-%d')"
+          git push
