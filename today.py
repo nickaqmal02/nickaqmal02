@@ -37,8 +37,8 @@ CACHE_FILE = CACHE_DIR / f"{hashlib.sha256(USER_NAME.encode()).hexdigest()}.txt"
 
 OWNER_ID: dict[str, str] = {}
 STAT_IDS = (
-    "account_age", "commit_data", "repo_data", "star_data",
-    "contrib_data", "follower_data", "loc_data", "loc_delta",
+    "account_age", "repo_data", "star_data", "commit_data",
+    "follower_data", "loc_data", "loc_add", "loc_del",
 )
 
 
@@ -259,16 +259,14 @@ def main() -> None:
         add, dele, my_commits = loc_totals(repos)
         values["commit_data"] = my_commits
         values["loc_data"] = add - dele
-        values["loc_delta"] = f"+{add:,} / −{dele:,}"
+        values["loc_add"] = f"+{add:,}"
+        values["loc_del"] = f"−{dele:,}"
     except Exception as exc:
         print(f"  !! lines-of-code failed: {exc}")
 
     values["account_age"] = account_age(created)
     values["repo_data"] = attempt("repos", "repo_data", lambda: repo_stats("repos", ["OWNER"]))
     values["star_data"] = attempt("stars", "star_data", lambda: repo_stats("stars", ["OWNER"]))
-    values["contrib_data"] = attempt("contributions", "contrib_data",
-                                     lambda: repo_stats("repos", ["OWNER", "COLLABORATOR",
-                                                                  "ORGANIZATION_MEMBER"]))
     values["follower_data"] = attempt("followers", "follower_data",
                                       lambda: follower_getter(USER_NAME))
 
