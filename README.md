@@ -9,7 +9,9 @@
 
 I build models that survive evaluation and backends that people actually use.
 Email: **nikabdulaqmal@gmail.com** ·
-[📄 Résumé (PDF)](https://raw.githubusercontent.com/nickaqmal02/nickaqmal02/master/nik_resume.pdf)
+[📄 Download résumé (PDF)](https://raw.githubusercontent.com/nickaqmal02/nickaqmal02/master/nik_resume.pdf)
+
+![Résumé preview — pages loop every 6s](nik_resume_preview.gif)
 
 ---
 
