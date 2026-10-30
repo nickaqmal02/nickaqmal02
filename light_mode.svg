@@ -264,7 +264,7 @@
 <text id="commit_data" x="1140" y="480" font-size="13" fill="#1b222c" text-anchor="end">211</text>
 <text x="550" y="504" font-size="12" letter-spacing="1.2" fill="#7c5cbf">FOLLOWERS</text>
 <line x1="627" y1="500" x2="1012" y2="500" stroke="#6b7785" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
-<text id="follower_data" x="1140" y="504" font-size="13" fill="#1b222c" text-anchor="end">35</text>
+<text id="follower_data" x="1140" y="504" font-size="13" fill="#1b222c" text-anchor="end">34</text>
 <text x="550" y="528" font-size="12" letter-spacing="1.2" fill="#7c5cbf">LINES</text>
 <line x1="598" y1="524" x2="1012" y2="524" stroke="#6b7785" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
 <text id="loc_data" x="1140" y="528" font-size="13" fill="#1b222c" text-anchor="end">520,826</text>
