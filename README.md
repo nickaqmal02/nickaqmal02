@@ -8,7 +8,8 @@
 ### Final-year Computer Science @ UPNM · applied NLP & ML · backend engineering
 
 I build models that survive evaluation and backends that people actually use.
-Email: **nikabdulaqmal@gmail.com**
+Email: **nikabdulaqmal@gmail.com** ·
+[📄 Résumé (PDF)](https://raw.githubusercontent.com/nickaqmal02/nickaqmal02/master/nik_resume.pdf)
 
 ---
 
