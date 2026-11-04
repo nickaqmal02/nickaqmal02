@@ -227,7 +227,7 @@
 <text x="1140" y="120" font-size="13" fill="#dbe6f0" text-anchor="end">running</text>
 <text x="550" y="144" font-size="12" letter-spacing="1.2" fill="#8b6fd4">UPTIME</text>
 <line x1="605" y1="140" x2="1012" y2="140" stroke="#6b7d8f" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
-<text id="account_age" x="1140" y="144" font-size="13" fill="#dbe6f0" text-anchor="end">1 yr, 5 mo</text>
+<text id="account_age" x="1140" y="144" font-size="13" fill="#dbe6f0" text-anchor="end">1 yr, 6 mo</text>
 <text x="550" y="168" font-size="12" letter-spacing="1.2" fill="#8b6fd4">HOST</text>
 <line x1="591" y1="164" x2="1012" y2="164" stroke="#6b7d8f" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
 <text x="1140" y="168" font-size="13" fill="#dbe6f0" text-anchor="end">UPNM · Malaysia</text>
@@ -264,7 +264,7 @@
 <text id="commit_data" x="1140" y="480" font-size="13" fill="#dbe6f0" text-anchor="end">214</text>
 <text x="550" y="504" font-size="12" letter-spacing="1.2" fill="#8b6fd4">FOLLOWERS</text>
 <line x1="627" y1="500" x2="1012" y2="500" stroke="#6b7d8f" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
-<text id="follower_data" x="1140" y="504" font-size="13" fill="#dbe6f0" text-anchor="end">35</text>
+<text id="follower_data" x="1140" y="504" font-size="13" fill="#dbe6f0" text-anchor="end">34</text>
 <text x="550" y="528" font-size="12" letter-spacing="1.2" fill="#8b6fd4">LINES</text>
 <line x1="598" y1="524" x2="1012" y2="524" stroke="#6b7d8f" stroke-width="1" stroke-dasharray="1 5" opacity="0.65"/>
 <text id="loc_data" x="1140" y="528" font-size="13" fill="#dbe6f0" text-anchor="end">522,916</text>
