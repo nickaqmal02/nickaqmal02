@@ -17,6 +17,8 @@ Email: **nikabdulaqmal@gmail.com** ·
 
 ![koi](koi/koi.gif)
 
+![Top Langs]
+
 ## 📌 Portfolio
 
 ### 🧠 Sentiri — Autism therapy chat analyzer
