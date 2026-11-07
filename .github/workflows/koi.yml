@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: yalongwastaken/git-profile-koi@v1.0.2
+      - uses: yalongwastaken/git-koi@v1.0.2
         with:
           login: nickaqmal02
           body: asagi
