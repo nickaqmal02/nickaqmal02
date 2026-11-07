@@ -17,6 +17,8 @@ Email: **nikabdulaqmal@gmail.com** ·
 
 ![koi](koi/koi.gif)
 
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nickaqmal02&layout=compact&theme=dark)](https://github.com/readme-stats)
+
 ![Top Langs]
 
 ## 📌 Portfolio
