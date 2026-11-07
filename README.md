@@ -15,7 +15,7 @@ Email: **nikabdulaqmal@gmail.com** ·
 
 ---
 
-<img src="koi/koi.gif?v=5" width="300" alt="koi">
+<img src="koi/koi.gif?v=5" width="500" alt="koi" align="center">
 
 ## 📌 Portfolio
 
