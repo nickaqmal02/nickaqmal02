@@ -17,7 +17,7 @@ jobs:
       - uses: yalongwastaken/git-koi@v1.0.2
         with:
           login: nickaqmal02
-          body: asagi
+          body: gold
           output-dir: koi
 
       - name: Commit the koi
