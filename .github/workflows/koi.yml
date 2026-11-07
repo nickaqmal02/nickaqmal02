@@ -1,4 +1,3 @@
-yaml
 name: Koi
 
 on:
@@ -15,10 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: yalongwastaken/git-profile-koi@vX.Y.Z   # pin to a real release tag from the releases page, not main
+      - uses: yalongwastaken/git-profile-koi@v1.0.2
         with:
           login: nickaqmal02
-          body: asagi        # white/black/asagi/tea/gold/platinum — pick your koi
+          body: asagi
           output-dir: koi
 
       - name: Commit the koi
