@@ -16,6 +16,7 @@ Email: **nikabdulaqmal@gmail.com** ·
 ---
 
 ![koi](koi/koi.gif)
+<img src="koi/koi.gif" width="256" alt="My koi" />
 
 ## 📌 Portfolio
 
