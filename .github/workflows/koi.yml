@@ -1,0 +1,30 @@
+yaml
+name: Koi
+
+on:
+  schedule:
+    - cron: "0 17 * * *"   # 17:00 UTC = 1am MYT nightly
+  workflow_dispatch: {}     # lets you run it manually for testing
+
+permissions:
+  contents: write
+
+jobs:
+  koi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: yalongwastaken/git-profile-koi@vX.Y.Z   # pin to a real release tag from the releases page, not main
+        with:
+          login: nickaqmal02
+          body: asagi        # white/black/asagi/tea/gold/platinum — pick your koi
+          output-dir: koi
+
+      - name: Commit the koi
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add koi/
+          git commit -m "koi: nightly render" || echo "no changes"
+          git push
