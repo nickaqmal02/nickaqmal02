@@ -35,6 +35,23 @@ Email: **nikabdulaqmal@gmail.com** ·
 
 ---
 
+## ⚙️ How I work
+
+- **Measure before believing.** Every model choice gets a held-out benchmark — including the ones that prove me wrong ([mBERT beat my pick](#-model-evaluation--xlm-r-vs-mbert-vs-indobert-vs-distilbert)).
+- **The LLM proposes, code verifies.** Agents never commit an action (a booking, a tool call) until deterministic Python has checked it.
+- **Privacy is a pipeline stage, not a policy.** PII is stripped before any text reaches a model.
+- **Online and offline paths.** Every stage of my voice agent has a local fallback, so it degrades instead of dying.
+- **Automate the boring parts.** This profile card rebuilds itself nightly from the GitHub API via Actions.
+
+## 🛠 Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,pytorch,django,fastapi,postgres,redis,swift,js,react,tailwind,laravel,rust,linux,neovim,git,matlab&perline=8" alt="Python, PyTorch, Django, FastAPI, PostgreSQL, Redis, Swift, JavaScript, React, Tailwind, Laravel, Rust, Linux, Neovim, Git, MATLAB">
+</p>
+<p align="center"><sub>plus Hugging Face Transformers · LangChain · ChromaDB · BERTopic · Celery · Ollama · Quarto</sub></p>
+
+---
+
 <img src="koi/koi.gif?v=5" width="800" alt="koi" align="center">
 
 ## 📌 Portfolio
@@ -96,6 +113,10 @@ Personal retrieval-augmented agent with a real TUI: ingest PDFs, semantic search
 
 ## 🧰 Also on GitHub
 
+<details>
+<summary>12 more projects — e-commerce, data analysis, image processing, learning tracks</summary>
+<br>
+
 | Project | What it is | Stack |
 |---|---|---|
 | [django_ecommerce_stripe](https://github.com/nickaqmal02/django_ecommerce_stripe) | E-commerce with payments and order state | Django, Stripe |
@@ -106,6 +127,8 @@ Personal retrieval-augmented agent with a real TUI: ingest PDFs, semantic search
 | [notesprojectcli](https://github.com/nickaqmal02/notesprojectcli) | CLI notes app | Python |
 | [learningdjangoblog](https://github.com/nickaqmal02/learningdjangoblog) · [fullstackapplication](https://github.com/nickaqmal02/fullstackapplication) · [javascriptlearningjourney](https://github.com/nickaqmal02/javascriptlearningjourney) · [first_rust_program](https://github.com/nickaqmal02/first_rust_program) | Learning tracks kept public on purpose | Django · JS · Rust |
 | [RAGLearning](https://github.com/nickaqmal02/RAGLearning) · [RAGPersonalAcademy](https://github.com/nickaqmal02/RAGPersonalAcademy) | RAG bootcamp notes and experiments | Python |
+
+</details>
 
 ---
 
@@ -118,6 +141,17 @@ Personal retrieval-augmented agent with a real TUI: ingest PDFs, semantic search
 | **Awards** | Dean's List · First Class Award, UPNM |
 | **Certifications** | MATLAB Fundamentals & Machine Learning · Django & REST APIs · Full-stack (Tailwind, JS, PostgreSQL) |
 | **Currently learning** | FastAPI + Poetry, vector databases, Swift beyond the terminal |
+
+---
+
+## 📈 Consistency
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=nickaqmal02&hide_border=true&theme=dark&background=00000000">
+    <img alt="GitHub contribution streak for nickaqmal02" src="https://streak-stats.demolab.com?user=nickaqmal02&hide_border=true&theme=default&background=00000000">
+  </picture>
+</p>
 
 ---
 
