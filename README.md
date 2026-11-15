@@ -5,13 +5,33 @@
   </picture>
 </a>
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=2F81F7&center=true&vCenter=true&width=720&lines=Fine-tuned+XLM-R+on+2%2C000+self-labelled+Malay+messages;Benchmarked+4+transformers+%E2%80%94+and+published+the+losses;Shipped+a+RAG+%2B+agent+platform+for+real+therapy+centres;Built+a+local-first+macOS+voice+agent+in+pure+Swift" alt="Fine-tuned XLM-R on 2,000 self-labelled Malay messages · Benchmarked 4 transformers and published the losses · Shipped a RAG + agent platform for real therapy centres · Built a local-first macOS voice agent in pure Swift">
+</p>
+
 ### Final-year Computer Science @ UPNM · applied NLP & ML · backend engineering
 
 I build models that survive evaluation and backends that people actually use.
 Email: **nikabdulaqmal@gmail.com** ·
-[📄 Download résumé (PDF)](https://raw.githubusercontent.com/nickaqmal02/nickaqmal02/master/nik_resume.pdf)
+[📄 Résumé (PDF)](https://raw.githubusercontent.com/nickaqmal02/nickaqmal02/master/nik_resume.pdf)
+
+<table align="center">
+  <tr>
+    <td align="center" width="20%"><b>0.933</b><br>negative recall</td>
+    <td align="center" width="20%"><b>2,000</b><br>hand-labelled msgs</td>
+    <td align="center" width="20%"><b>4</b><br>models benchmarked</td>
+    <td align="center" width="20%"><b>1,400+</b><br>journal lines</td>
+    <td align="center" width="20%"><b>3.79</b><br>CGPA · Dean's List</td>
+  </tr>
+</table>
+
+<details>
+<summary><b>Résumé preview</b> (pages loop every 6s)</summary>
+<br>
 
 ![Résumé preview — pages loop every 6s](nik_resume_preview.gif)
+
+</details>
 
 ---
 
