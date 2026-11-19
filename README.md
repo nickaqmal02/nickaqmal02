@@ -6,7 +6,7 @@
 </a>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=2F81F7&center=true&vCenter=true&width=720&lines=Fine-tuned+XLM-R+on+2%2C000+self-labelled+Malay+messages;Benchmarked+4+transformers+%E2%80%94+and+published+the+losses;Shipped+a+RAG+%2B+agent+platform+for+real+therapy+centres;Built+a+local-first+macOS+voice+agent+in+pure+Swift" alt="Fine-tuned XLM-R on 2,000 self-labelled Malay messages · Benchmarked 4 transformers and published the losses · Shipped a RAG + agent platform for real therapy centres · Built a local-first macOS voice agent in pure Swift">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=2F81F7&center=true&vCenter=true&width=720&lines=Fine-tuned+XLM-R+on+2%2C000+self-labelled+Malay+messages;Benchmarked+4+transformers+%E2%80%94+and+published+the+losses;Shipped+a+RAG+%2B+agent+platform+for+real+therapy+centres;Built+a+local-first+macOS+voice+agent+in+pure+Swift;Took+my+agent+from+5%2F24+to+24%2F24+tasks+with+a+tool+loop" alt="Fine-tuned XLM-R on 2,000 self-labelled Malay messages · Benchmarked 4 transformers and published the losses · Shipped a RAG + agent platform for real therapy centres · Built a local-first macOS voice agent in pure Swift · Took my agent from 5/24 to 24/24 tasks with a tool loop">
 </p>
 
 ### Final-year Computer Science @ UPNM · applied NLP & ML · backend engineering
@@ -41,14 +41,15 @@ Email: **nikabdulaqmal@gmail.com** ·
 - **The LLM proposes, code verifies.** Agents never commit an action (a booking, a tool call) until deterministic Python has checked it.
 - **Privacy is a pipeline stage, not a policy.** PII is stripped before any text reaches a model.
 - **Online and offline paths.** Every stage of my voice agent has a local fallback, so it degrades instead of dying.
+- **Least privilege by default.** Cloud credentials get only the actions they need, and I test the denials, not just the happy path.
 - **Automate the boring parts.** This profile card rebuilds itself nightly from the GitHub API via Actions.
 
 ## 🛠 Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,pytorch,django,fastapi,postgres,redis,swift,js,react,tailwind,laravel,rust,linux,neovim,git,matlab&perline=8" alt="Python, PyTorch, Django, FastAPI, PostgreSQL, Redis, Swift, JavaScript, React, Tailwind, Laravel, Rust, Linux, Neovim, Git, MATLAB">
+  <img src="https://skillicons.dev/icons?i=python,pytorch,django,fastapi,postgres,redis,swift,aws,js,react,tailwind,laravel,rust,linux,neovim,git,matlab&perline=9" alt="Python, PyTorch, Django, FastAPI, PostgreSQL, Redis, Swift, AWS, JavaScript, React, Tailwind, Laravel, Rust, Linux, Neovim, Git, MATLAB">
 </p>
-<p align="center"><sub>plus Hugging Face Transformers · LangChain · ChromaDB · BERTopic · Celery · Ollama · Quarto</sub></p>
+<p align="center"><sub>plus Hugging Face Transformers · LangChain · ChromaDB · BERTopic · Celery · Ollama · Quarto · SwiftUI · AWS S3 / CloudFront / IAM</sub></p>
 
 ---
 
@@ -94,9 +95,14 @@ My project shipped XLM-R because "it handles Malay natively." That is a hypothes
 ---
 
 ### 🎙 ApexAgent — macOS voice agent in pure Swift
-`Swift` · `Ollama` · `Deepgram` · `Accessibility API`
+`Swift` · `SwiftUI` · `DeepSeek` · `Ollama` · `Deepgram` · `AWS S3 / CloudFront / IAM`
 
-Jarvis, but local. Voice in → intent → tool execution → voice out, with an online *and* offline path at every stage: Deepgram Flux / Apple Speech, GLM API / local Qwen3 8B, Aura-2 / `AVSpeechSynthesizer`. No Xcode project — Swift Package Manager from the terminal.
+Jarvis, but local. Voice in → intent → tool execution → voice out, with an online *and* offline path at every stage: Deepgram / Apple Speech, DeepSeek API / local Qwen3 8B, Aura-2 / `AVSpeechSynthesizer`. No Xcode project — Swift Package Manager from the terminal.
+
+- **Agent loop** — the model picks one guarded tool per step, reads the result, and decides the next (max 5 steps, stuck detection). On a 12-task eval the single-call baseline finished **5/24 tasks (21/44 steps)** because replies promised steps that never ran; the loop finishes **24/24 (44/44)**, and wrong-tool calls fell from **4.8% to 0%**.
+- **Fixed from the traces** — a speech pause after "and" split one command in two; unfinished commands are now held up to 2.5 s, with tests.
+- **Study notch** — a pomodoro tracker inside the MacBook notch: hover, pick a subject, focus timer with breaks, sessions logged to CSV. ~12 MB RAM idle.
+- **Cloud report** — the CSV becomes a health-app style dashboard on **S3 behind CloudFront**: private bucket via origin access control, a least-privilege IAM uploader (3 actions), cache invalidation, and automatic republishing from the app when a session ends.
 
 [**Repository →**](https://github.com/nickaqmal02/ApexAgent) · [**Demo video →**](https://github.com/nickaqmal02/ApexAgent/blob/main/media/simpledemo.mp4)
 
@@ -140,7 +146,7 @@ Personal retrieval-augmented agent with a real TUI: ingest PDFs, semantic search
 | **STPM** | Science stream · 3.92 |
 | **Awards** | Dean's List · First Class Award, UPNM |
 | **Certifications** | MATLAB Fundamentals & Machine Learning · Django & REST APIs · Full-stack (Tailwind, JS, PostgreSQL) |
-| **Currently learning** | FastAPI + Poetry, vector databases, Swift beyond the terminal |
+| **Currently learning** | AWS serverless (Lambda, API Gateway, DynamoDB), infrastructure as code (CloudFormation), FastAPI |
 
 ---
 
