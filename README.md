@@ -109,6 +109,17 @@ Jarvis, but local. Voice in → intent → tool execution → voice out, with an
 
 ---
 
+### ✈️ AI Aircraft Maintenance Analytics Platform
+`Python` · `FastAPI` · `pandas` · `Amazon Bedrock` · `React` · `Docker` · `Kubernetes (EKS)`
+
+Upload an aircraft maintenance log (Excel) and get an engineering summary plus an AI maintenance report.
+
+- **Analytics** — pandas compares each aircraft's latest readings with its previous 10 records (change % and trend direction).
+- **AI report** — Amazon Bedrock (Nova Pro, Converse API) reads the analytics alongside the aircraft maintenance manual and returns structured JSON to a React dashboard.
+- **Deployment** — multi-arch Docker images (amd64/arm64) in Amazon ECR, running on Amazon EKS behind public Network Load Balancers, with Kubernetes manifests and a rebuild runbook so the cluster can be deleted when idle.
+
+---
+
 ### 🔎 PersonalRAG — a second brain in the terminal
 `Python` · `Textual` · `Groq` · vector search
 
