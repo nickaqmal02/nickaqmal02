@@ -42,14 +42,15 @@ Email: **nikabdulaqmal@gmail.com** ·
 - **Privacy is a pipeline stage, not a policy.** PII is stripped before any text reaches a model.
 - **Online and offline paths.** Every stage of my voice agent has a local fallback, so it degrades instead of dying.
 - **Least privilege by default.** Cloud credentials get only the actions they need, and I test the denials, not just the happy path.
+- **Infrastructure is written down.** Kubernetes manifests and a rebuild runbook live next to the code, so an idle cluster gets deleted instead of billing overnight.
 - **Automate the boring parts.** This profile card rebuilds itself nightly from the GitHub API via Actions.
 
 ## 🛠 Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,pytorch,django,fastapi,postgres,redis,swift,aws,js,react,tailwind,laravel,rust,linux,neovim,git,matlab&perline=9" alt="Python, PyTorch, Django, FastAPI, PostgreSQL, Redis, Swift, AWS, JavaScript, React, Tailwind, Laravel, Rust, Linux, Neovim, Git, MATLAB">
+  <img src="https://skillicons.dev/icons?i=python,pytorch,django,fastapi,postgres,redis,swift,aws,docker,kubernetes,js,react,tailwind,laravel,rust,linux,neovim,git,matlab&perline=9" alt="Python, PyTorch, Django, FastAPI, PostgreSQL, Redis, Swift, AWS, Docker, Kubernetes, JavaScript, React, Tailwind, Laravel, Rust, Linux, Neovim, Git, MATLAB">
 </p>
-<p align="center"><sub>plus Hugging Face Transformers · LangChain · ChromaDB · BERTopic · Celery · Ollama · Quarto · SwiftUI · AWS S3 / CloudFront / IAM</sub></p>
+<p align="center"><sub>plus Hugging Face Transformers · LangChain · ChromaDB · BERTopic · Celery · Ollama · Quarto · SwiftUI · AWS S3 / CloudFront / IAM · Amazon EKS / ECR / NLB · Amazon Bedrock · Docker Buildx (multi-arch)</sub></p>
 
 ---
 
@@ -146,7 +147,7 @@ Personal retrieval-augmented agent with a real TUI: ingest PDFs, semantic search
 | **STPM** | Science stream · 3.92 |
 | **Awards** | Dean's List · First Class Award, UPNM |
 | **Certifications** | MATLAB Fundamentals & Machine Learning · Django & REST APIs · Full-stack (Tailwind, JS, PostgreSQL) |
-| **Currently learning** | AWS serverless (Lambda, API Gateway, DynamoDB), infrastructure as code (CloudFormation), FastAPI |
+| **Currently learning** | CI/CD (GitHub Actions → ECR → EKS with OIDC), AWS serverless (Lambda, API Gateway, DynamoDB), infrastructure as code (CloudFormation) |
 
 ---
 
