@@ -121,7 +121,7 @@ Personal retrieval-augmented agent with a real TUI: ingest PDFs, semantic search
 ## 🧰 Also on GitHub
 
 <details>
-<summary>12 more projects — e-commerce, data analysis, image processing, learning tracks</summary>
+<summary>10 more projects — e-commerce, data analysis, image processing, learning tracks</summary>
 <br>
 
 | Project | What it is | Stack |
@@ -132,8 +132,8 @@ Personal retrieval-augmented agent with a real TUI: ingest PDFs, semantic search
 | [fuzzylogicvisualization](https://github.com/nickaqmal02/fuzzylogicvisualization) | Interactive fuzzy-inference explainer | HTML, JS |
 | [DIGITALIMAGEPROCESSING](https://github.com/nickaqmal02/DIGITALIMAGEPROCESSING) | Coursework: filters, transforms, feature work | Python |
 | [notesprojectcli](https://github.com/nickaqmal02/notesprojectcli) | CLI notes app | Python |
-| [learningdjangoblog](https://github.com/nickaqmal02/learningdjangoblog) · [fullstackapplication](https://github.com/nickaqmal02/fullstackapplication) · [javascriptlearningjourney](https://github.com/nickaqmal02/javascriptlearningjourney) · [first_rust_program](https://github.com/nickaqmal02/first_rust_program) | Learning tracks kept public on purpose | Django · JS · Rust |
-| [RAGLearning](https://github.com/nickaqmal02/RAGLearning) · [RAGPersonalAcademy](https://github.com/nickaqmal02/RAGPersonalAcademy) | RAG bootcamp notes and experiments | Python |
+| [fullstackapplication](https://github.com/nickaqmal02/fullstackapplication) · [javascriptlearningjourney](https://github.com/nickaqmal02/javascriptlearningjourney) · [first_rust_program](https://github.com/nickaqmal02/first_rust_program) | Learning tracks kept public on purpose | Full-stack · JS · Rust |
+| [RAGLearning](https://github.com/nickaqmal02/RAGLearning) | RAG bootcamp notes and experiments | Python |
 
 </details>
 
